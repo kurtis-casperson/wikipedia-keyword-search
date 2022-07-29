@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+    <link rel="stylesheet" href="styles.scss">
     <title>Wikipedia Random Keyword Search</title>
 </head>
 <body>
@@ -13,12 +13,17 @@
     <h3>Use the Wikipedia API</h3>
 
     <p>type a single word and see the top ten articles containing that word</p>
-<!-- <div class="button"> -->
-<p>
-  wiki word: <input type="text" placeholder="Search anything">
-</p>
-   <button type="button" id="search"> Search</button>
+<section class="searchEntry">
+<form id="searchBar" class="searchBar">
 
+  <input type="text" id="input-word" placeholder="Search anything" autocomplete="off">
+
+<div id="clear" class="clear button" role="button" tabindex="0" aria-label="Clear search terms">
+    X
+</div>
+   <button type="submit" id="search" class="button searchButton" aria-label="submit button"> Search</button>
+</form>
+</section>
 <script src="wiki.js" defer></script>
 </body>
 </html>
